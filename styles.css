@@ -25,11 +25,26 @@ header {
     margin-bottom: 40px;
 }
 
-nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+nav ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes any default padding */
+    margin: 0; /* Removes any default margin */
+}
+
+nav ul li {
+    /* display: inline-block; Aligns the list items horizontally */
+    margin-right: 20px; /* Adds space between the list items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underlines from the links */
+    color: white; /* Sets the link color */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 600; /* Makes the links bold */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 
 .hero h2 {
@@ -56,3 +71,62 @@ nav a {
 .btn:hover {
     transform: scale(1.1);
 }
+
+/* Download Section Styling */
+.download {
+    /* background-color: #f5f5f5; Light gray background for the section */
+    padding: 20px 0; /* Add padding to the top and bottom */
+    text-align: center; /* Center align the content */
+}
+
+.download h2 {
+    font-size: 2.5rem;
+    color: white; /* Primary color */
+    margin-bottom: 20px;
+}
+
+.download p {
+    font-size: 1.2rem;
+    color: whi;
+    margin-bottom: 30px;
+}
+
+.store-buttons {
+    /* display: flex; */
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.store-buttons .btn {
+    background-color: white; /* Primary color for the button */
+    color: #e52e71;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.store-buttons .btn:hover {
+    background-color: white; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .store-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 15px; /* Reduce space between buttons */
+    }
+
+    .download h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .download p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
